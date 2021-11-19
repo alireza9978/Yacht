@@ -8,7 +8,8 @@ class Dice:
         self.hold = False
 
     def set_value(self, value):
-        self.value = value
+        if not self.hold:
+            self.value = value
 
     def set_hold(self, hold):
         self.hold = hold
